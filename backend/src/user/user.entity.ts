@@ -14,7 +14,7 @@ export class UserEntity {
   @Column()
   phone_no: string;
 
-  @Column()
+  @Column({ unique: true })
   email: string;
 
   @Column()
