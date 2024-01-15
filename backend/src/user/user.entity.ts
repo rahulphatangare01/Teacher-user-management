@@ -1,6 +1,8 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Unique } from 'typeorm';
 
 @Entity('users')
+@Unique(['email'])
+@Unique(['phone_no'])
 export class UserEntity {
   @PrimaryGeneratedColumn()
   id: any;
@@ -11,7 +13,7 @@ export class UserEntity {
   @Column()
   lastName: string;
 
-  @Column()
+  @Column({ unique: true })
   phone_no: string;
 
   @Column({ unique: true })
