@@ -6,3 +6,8 @@ export class RegistrationDto {
   role: string;
   password: string;
 }
+
+export class LoginDto {
+  identifier: string;
+  password: string;
+}
